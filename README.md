@@ -7,7 +7,7 @@ I've created this simple program to solidify the concept of 'classes' and 'struc
 these two objects interact with one another. 
 
 I've left plenty of notes that describe the behavior of the code. These notes helped me 
-(and hopefully others) understand how the runs.
+(and hopefully others) understand how the program runs.
 
 ### What does this program do? ###
 The program creates a custom 'struct' type called 'Books' and a custom 'class' called 'TestStructure'. 
