@@ -1,0 +1,60 @@
+/*Importing the System library*/
+using System;
+
+/*Creating a public-access custom 'value type' using the 'struct' keyword and 
+calling this new 'value type' 'Books' */
+
+public struct Books {
+
+	/*Creating private-access 'int' and 'string' properties for the 'Books' struct
+	and assigning properties to appropriatly-named 'identifiers'*/
+	private string title, author, subject;
+	private int book_id;
+	
+	/*Creating a 'public access' 'return void' function called 'getVales'
+	which will take in paramaters and assign those values to the appropriate property of 
+	the 'Books' structure*/
+	public void getValues(string t, string a, string s, int b){
+		title = t;
+		author = a;
+		subject = s;
+		book_id = b;
+	}
+	
+	/*Creating a 'public access' 'return void' functin called 'display' that will
+	print out te properties of a 'book' object*/
+	public void display(){
+		Console.WriteLine("Title: {0}", title);
+		Console.WriteLine("Author: {0}", author);
+		Console.WriteLine("Subject: {0}", subject);
+		Console.WriteLine("Book ID: {0}", book_id);
+	}
+};
+
+/*Creating a 'public access' 'class' structure called 'TestStructure' */
+public class TestStructure {
+
+	public static void Main(string[] args)
+	{
+	/*Creating two new 'Books' objects: 
+		-State the type 'Books'
+		-State the name of the new object 'Books1'
+		-Use the 'new' keyword to actually call the 'Books'class and initialize the new objects
+	*/
+	
+	Books Books1 = new Books();
+	Books Books2 = new Books();
+	
+	/*Send properties of the books through the 'getValues' function */
+	Books1.getValues("C# in a Nutshell", "Albahari & Albahari", "C# Programming",1000);
+	Books2.getValues("The Atlantic", "Various Authors", "Journal", 1001);
+	
+	/*Display the values of the 'Books' objects */
+	Books1.display();
+	Books2.display();
+	
+	//Console.ReadKey();
+		
+	}
+}
+// Define other methods and classes here
